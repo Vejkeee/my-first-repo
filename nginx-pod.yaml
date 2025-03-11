@@ -13,3 +13,10 @@ spec:
       image: nginx:latest
       ports:
         - containerPort: 80
+      volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+volumes:
+  - name: html
+    hostPath:
+      path: /home/vejkeee/my-first-repo/index.html
