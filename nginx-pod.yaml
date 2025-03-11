@@ -2,6 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod
+  labels:
+    app: nginx
+    enviroment: dev
+  annotations:
+    description: "this is a test pod running Nginx"
 spec:
   containers:
     - name: nginx
